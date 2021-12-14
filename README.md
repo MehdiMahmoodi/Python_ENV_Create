@@ -1,5 +1,6 @@
 # [Linux:Creating a virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
-Also see the [link](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)
+Also see the [link](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)<br>
+and [this](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
 ## create a virtual environment, 
 go to your project’s directory and run:<br> python3 -m venv newenv<br>
 ## Activating a virtual environment
