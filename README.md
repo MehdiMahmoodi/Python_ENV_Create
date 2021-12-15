@@ -84,7 +84,7 @@ Use the terminal or an Anaconda Prompt for the following steps:
 
 You can control where a conda environment lives by providing a path to a target directory when creating the environment. You need to navigate to the subdirectory which you want to have the env (your project folder) through the terminal/anaconda prompt, then create the ENV. For example, the following command will create a new environment in a subdirectory of the current working directory called myenvs:
 
-conda create --prefix ./myenvs jupyterlab=0.35 matplotlib=3.1 numpy=1.16
+conda create --prefix ./myenvs python=3.6 jupyterlab=0.35 matplotlib=3.1 numpy=1.16
 
 You then activate an environment created with a prefix using the same command used to activate environments created by name:
 
