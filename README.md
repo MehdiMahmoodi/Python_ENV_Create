@@ -6,7 +6,7 @@
 *[link-4](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)<br>
 *[link-5](https://conda.pydata.org/docs/using/envs.html)<br>
 *[link-6-recomended](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)<br>
-## create a virtual environment, 
+## create a virtual environment, (conda create --help)
 Use the terminal or an Anaconda Prompt for the following steps:<br>
 1-  To create an environment:<br>
 conda create --name myenv<br>
@@ -29,11 +29,6 @@ Note:Replace myenv with the environment name.<br>
 
     conda create -n myenv python
     conda install -n myenv scipy
-3-  To add the libraries to your created ENV, you can activate your library:
-    conda activate myenv
-    then: start installing whatever libraries which you want:
-    conda install pandas 
-
     *To create an environment with a specific version of a package:
 
     conda create -n myenv scipy=0.15.0
@@ -47,47 +42,43 @@ Note:Replace myenv with the environment name.<br>
 
     conda create -n myenv python=3.6 scipy=0.15.0 astroid babel
 
+3-  To add the libraries to your created ENV, you can activate your library:<br>
+    conda activate myenv<br>
+    then start installing whatever libraries which you want:<br>
+    conda install scipy=0.15.0<br>
+    *To add a specific version of a package:
+    conda install scipy=0.15.0
+    
 
-## Activating a virtual environment
+    
+
+## Activating/Deactivating a virtual environment
 *Before you can start installing or using packages in your virtual environment you’ll need to activate it. 
 Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.<br>
-source newenv/bin/activate<br>
-You can confirm you’re in the virtual environment by checking the location of your Python interpreter:<br>
-which python<br>
-It should be in the env directory:<br>
-.../env/bin/python<br>
-As long as your virtual environment is activated pip will install packages into that specific environment and you’ll be able to import and use packages in your Python application.
-## Leaving the virtual environment<br>
+conda activate myenv<br><br>
 
-If you want to switch projects or otherwise leave your virtual environment, simply run:<br>
+for deactivating:<br><br>
 
-deactivate<br>
+conda deactivate myenv<br>
+## Creating an environment from an environment.yml file
 
-If you want to re-enter the virtual environment just follow the same instructions above about activating a virtual environment. There’s no need to re-create the virtual environment.
-##Installing packages
+Use the terminal or an Anaconda Prompt for the following steps:
 
-*Now that you’re in your virtual environment you can install packages. Let’s install the Requests library from the Python Package Index (PyPI):<br>
-python3 -m pip install requests<br>
-## Installing specific versions
+    Create the environment from the environment.yml file:
 
-pip allows you to specify which version of a package to install using version specifiers. For example, to install a specific version of requests:<br>
-python3 -m pip install requests==2.18.4<br>
-To install the latest 2.x release of requests:<br>
-python3 -m pip install requests>=2.0.0,<3.0.0<br>
-To install pre-release versions of packages, use the --pre flag:<br>
-python3 -m pip install --pre requests<br>
-If you have a local copy of a Distribution Package’s archive (a zip, wheel, or tar file) you can install it directly with pip:<br>
-python3 -m pip install requests-2.18.4.tar.gz<br>
-## Upgrading packages
+    conda env create -f environment.yml
 
-*pip can upgrade packages in-place using the --upgrade flag. For example, to install the latest version of requests and all of its dependencies:<br>
-python3 -m pip install --upgrade requests<br>
-## Using requirements files
-Instead of installing packages individually, pip allows you to declare all dependencies in a Requirements File. For example you could create a requirements.txt file containing:<br>“Requirements files” are files containing a list of items to be installed using pip install like so:<br>
+    The first line of the yml file sets the new environment's name. For details see Creating an environment file manually.
+
+    Activate the new environment: conda activate myenv
+
+    Verify that the new environment was installed correctly:
+
+    conda env list
+
+    You can also use conda info --envs.
 
 
-requests==2.18.4<br>
-google-auth==1.1.0<br>
 
 
 
