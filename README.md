@@ -29,7 +29,10 @@ Note:Replace myenv with the environment name.<br>
 
     conda create -n myenv python
     conda install -n myenv scipy
-3-  To add the libraries to your created ENV, you can activate your library by
+3-  To add the libraries to your created ENV, you can activate your library:
+    conda activate myenv
+    then: start installing whatever libraries which you want:
+    conda install pandas <br>
 
     *To create an environment with a specific version of a package:<br>
 
