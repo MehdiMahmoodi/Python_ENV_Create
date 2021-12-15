@@ -1,4 +1,4 @@
-# Linux:Creating a virtual environment:
+# Creating a virtual environment:
 ## Useful links:<br>
 *[Link-1](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)<br>
 *[link-2](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)<br>
