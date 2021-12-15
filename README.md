@@ -76,7 +76,9 @@ Use the terminal or an Anaconda Prompt for the following steps:
 
     conda env list
 
-    You can also use conda info --envs.
+    You can also use:
+    
+    conda info --envs.
 
 ## Specifying a location for an environment
 
