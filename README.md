@@ -122,6 +122,24 @@ $ cd project-directory
 $ conda activate ./env
 (env) project-directory $
 
+## Updating an environment
+
+You may need to update your environment for a variety of reasons. For example, it may be the case that:
+
+    one of your core dependencies just released a new version (dependency version number update).
+
+    you need an additional package for data analysis (add a new dependency).
+
+    you have found a better package and no longer need the older package (add new dependency and remove old dependency).
+
+If any of these occur, all you need to do is update the contents of your environment.yml file accordingly and then run the following command:
+
+$ conda env update --prefix ./env --file environment.yml  --prune
+
+Note
+
+The --prune option causes conda to remove any dependencies that are no longer required from the environment.
+
 Updating an environment
 
 You may need to update your environment for a variety of reasons. For example, it may be the case that:
@@ -139,6 +157,7 @@ $ conda env update --prefix ./env --file environment.yml  --prune
 Note
 
 The --prune option causes conda to remove any dependencies that are no longer required from the environment.
+
 
 
 
