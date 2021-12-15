@@ -38,7 +38,8 @@ python3 -m pip install requests-2.18.4.tar.gz<br>
 *pip can upgrade packages in-place using the --upgrade flag. For example, to install the latest version of requests and all of its dependencies:<br>
 python3 -m pip install --upgrade requests<br>
 ## Using requirements files
-Instead of installing packages individually, pip allows you to declare all dependencies in a Requirements File. For example you could create a requirements.txt file containing:<br>
+Instead of installing packages individually, pip allows you to declare all dependencies in a Requirements File. For example you could create a requirements.txt file containing:<br>“Requirements files” are files containing a list of items to be installed using pip install like so:<br>
+
 
 requests==2.18.4<br>
 google-auth==1.1.0<br>
