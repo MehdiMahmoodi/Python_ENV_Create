@@ -79,7 +79,6 @@ Use the terminal or an Anaconda Prompt for the following steps:
     You can also use conda info --envs.
 
 ##Specifying a location for an environment
-
 
 You can control where a conda environment lives by providing a path to a target directory when creating the environment. For example, the following command will create a new environment in a subdirectory of the current working directory called envs:
 
