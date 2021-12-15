@@ -23,29 +23,29 @@ Note:Replace myenv with the environment name.<br>
 
     *To create an environment with a specific package:
 
-    conda create -n myenv scipy<br>
+    conda create -n myenv scipy
 
-    OR:<br>
+    OR:
 
     conda create -n myenv python
     conda install -n myenv scipy
 3-  To add the libraries to your created ENV, you can activate your library:
     conda activate myenv
     then: start installing whatever libraries which you want:
-    conda install pandas <br>
+    conda install pandas 
 
-    *To create an environment with a specific version of a package:<br>
+    *To create an environment with a specific version of a package:
 
-    conda create -n myenv scipy=0.15.0<br>
+    conda create -n myenv scipy=0.15.0
 
-    OR:<br>
+    OR:
 
-    conda create -n myenv python<br>
-    conda install -n myenv scipy=0.15.0<br>
+    conda create -n myenv python
+    conda install -n myenv scipy=0.15.0
 
-    *To create an environment with a specific version of Python and multiple packages:<br>
+    *To create an environment with a specific version of Python and multiple packages:
 
-    conda create -n myenv python=3.6 scipy=0.15.0 astroid babel<br>
+    conda create -n myenv python=3.6 scipy=0.15.0 astroid babel
 
 
 ## Activating a virtual environment
