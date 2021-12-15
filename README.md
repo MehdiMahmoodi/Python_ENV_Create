@@ -140,23 +140,84 @@ Note
 
 The --prune option causes conda to remove any dependencies that are no longer required from the environment.
 
-Updating an environment
 
-You may need to update your environment for a variety of reasons. For example, it may be the case that:
+## Viewing a list of your environments
 
-    one of your core dependencies just released a new version (dependency version number update).
+To see a list of all of your environments, in your terminal window or an Anaconda Prompt, run:
 
-    you need an additional package for data analysis (add a new dependency).
+conda info --envs
 
-    you have found a better package and no longer need the older package (add new dependency and remove old dependency).
+OR
 
-If any of these occur, all you need to do is update the contents of your environment.yml file accordingly and then run the following command:
+conda env list
 
-$ conda env update --prefix ./env --file environment.yml  --prune
+A list similar to the following is displayed:
 
-Note
+conda environments:
+myenv                 /home/username/miniconda/envs/myenv
+snowflakes            /home/username/miniconda/envs/snowflakes
+bunnies               /home/username/miniconda/envs/bunnies
 
-The --prune option causes conda to remove any dependencies that are no longer required from the environment.
+If this command is run by an administrator, a list of all environments belonging to all users will be displayed.
+## Viewing a list of the packages in an environment
+
+To see a list of all packages installed in a specific environment:
+
+    If the environment is not activated, in your terminal window or an Anaconda Prompt, run:
+
+    conda list -n myenv
+
+    If the environment is activated, in your terminal window or an Anaconda Prompt, run:
+
+    conda list
+
+    To see if a specific package is installed in an environment, in your terminal window or an Anaconda Prompt, run:
+
+    conda list -n myenv scipy
+
+## Using pip in an environment
+
+To use pip in your environment, in your terminal window or an Anaconda Prompt, run:
+
+conda install -n myenv pip
+conda activate myenv
+pip <pip_subcommand>
+
+Issues may arise when using pip and conda together. When combining conda and pip, it is best to use an isolated conda environment. Only after conda has been used to install as many packages as possible should pip be used to install any remaining software. If modifications are needed to the environment, it is best to create a new environment rather than running conda after pip. When appropriate, conda and pip requirements should be stored in text files.
+
+We recommend that you:
+
+Use pip only after conda
+
+        Install as many requirements as possible with conda then use pip.
+
+        Pip should be run with --upgrade-strategy only-if-needed (the default).
+
+        Do not use pip with the --user argument, avoid all users installs.
+
+Use conda environments for isolation
+
+        Create a conda environment to isolate any changes pip makes.
+
+        Environments take up little space thanks to hard links.
+
+        Care should be taken to avoid running pip in the root environment.
+
+Recreate the environment if changes are needed
+
+        Once pip has been used, conda will be unaware of the changes.
+
+        To install additional conda packages, it is best to recreate the environment.
+
+Store conda and pip requirements in text files
+
+        Package requirements can be passed to conda via the --file argument.
+
+        Pip accepts a list of Python packages with -r or --requirements.
+
+        Conda env will export or create environments based on a file with conda and pip requirements.
+
+
 
 
 
