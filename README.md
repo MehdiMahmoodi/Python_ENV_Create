@@ -82,23 +82,13 @@ Use the terminal or an Anaconda Prompt for the following steps:
 
 ## Specifying a location for an environment
 
-You can control where a conda environment lives by providing a path to a target directory when creating the environment. For example, the following command will create a new environment in a subdirectory of the current working directory called envs:
+You can control where a conda environment lives by providing a path to a target directory when creating the environment. You need to navigate to the subdirectory which you want to have the env (your project folder) through the terminal/anaconda prompt, then create the ENV. For example, the following command will create a new environment in a subdirectory of the current working directory called myenvs:
 
-conda create --prefix ./envs jupyterlab=0.35 matplotlib=3.1 numpy=1.16
+conda create --prefix ./myenvs jupyterlab=0.35 matplotlib=3.1 numpy=1.16
 
 You then activate an environment created with a prefix using the same command used to activate environments created by name:
 
 conda activate ./envs
-
-Specifying a path to a subdirectory of your project directory when creating an environment has the following benefits:
-
-        It makes it easy to tell if your project uses an isolated environment by including the environment as a subdirectory.
-
-        It makes your project more self-contained as everything, including the required software, is contained in a single project directory.
-
-An additional benefit of creating your project’s environment inside a subdirectory is that you can then use the same name for all your environments. If you keep all of your environments in your envs folder, you’ll have to give each environment a different name.
-
-There are a few things to be aware of when placing conda environments outside of the default envs folder.
 
     Conda can no longer find your environment with the --name flag. You’ll generally need to pass the --prefix flag along with the environment’s full path to find the environment.
 
@@ -110,7 +100,7 @@ After activating an environment using its prefix, your prompt will look similar 
 
 This can result in long prefixes:
 
-(/Users/USER_NAME/research/data-science/PROJECT_NAME/envs) $
+(/Users/USER_NAME/research/data-science/PROJECT_NAME/myenvs) $
 
 To remove this long prefix in your shell prompt, modify the env_prompt setting in your .condarc file:
 
