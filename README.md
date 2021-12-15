@@ -1,11 +1,11 @@
 # Linux:Creating a virtual environment:
 ## Useful links:<br>
-*[Link-1](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
+*[Link-1](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)<br>
 *[link-2](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)<br>
 *[link-3](https://pip.pypa.io/en/latest/user_guide/#requirements-files)<br>
-*[link-4](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
-*[link-5](https://conda.pydata.org/docs/using/envs.html)
-*[link-6-recomended](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)
+*[link-4](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)<br>
+*[link-5](https://conda.pydata.org/docs/using/envs.html)<br>
+*[link-6-recomended](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)<br>
 ## create a virtual environment, 
 Use the terminal or an Anaconda Prompt for the following steps:<br>
 1-  To create an environment:<br>
