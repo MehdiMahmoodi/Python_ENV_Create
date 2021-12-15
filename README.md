@@ -1,8 +1,49 @@
-# [Linux:Creating a virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
-Also see the [link](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)<br>
-and [this](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
+# Linux:Creating a virtual environment:
+## Useful links:<br>
+*[Link-1](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
+*[link-2](https://code.visualstudio.com/docs/python/environments#_global-virtual-and-conda-environments)<br>
+*[link-3](https://pip.pypa.io/en/latest/user_guide/#requirements-files)<br>
+*[link-4](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+*[link-5](https://conda.pydata.org/docs/using/envs.html)
+*[link-6-recomended](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)
 ## create a virtual environment, 
-go to your project’s directory and run:<br> python3 -m venv newenv<br>
+Use the terminal or an Anaconda Prompt for the following steps:<br>
+1-  To create an environment:<br>
+conda create --name myenv<br>
+Note:Replace myenv with the environment name.<br>
+2- When conda asks you to proceed, type y:<br>
+
+    proceed ([y]/n)?<br>
+
+    *This creates the myenv environment in /envs/. No packages will be installed in this environment.
+
+    *To create an environment with a specific version of Python:
+
+    conda create -n myenv python=3.6
+
+    *To create an environment with a specific package:
+
+    conda create -n myenv scipy<br>
+
+    OR:<br>
+
+    conda create -n myenv python
+    conda install -n myenv scipy
+
+    *To create an environment with a specific version of a package:<br>
+
+    conda create -n myenv scipy=0.15.0<br>
+
+    OR:<br>
+
+    conda create -n myenv python<br>
+    conda install -n myenv scipy=0.15.0<br>
+
+    *To create an environment with a specific version of Python and multiple packages:<br>
+
+    conda create -n myenv python=3.6 scipy=0.15.0 astroid babel<br>
+
+
 ## Activating a virtual environment
 *Before you can start installing or using packages in your virtual environment you’ll need to activate it. 
 Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.<br>
