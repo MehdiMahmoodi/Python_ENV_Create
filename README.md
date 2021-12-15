@@ -88,7 +88,9 @@ conda create --prefix ./myenvs python=3.6 jupyterlab=0.35 matplotlib=3.1 numpy=1
 
 You then activate an environment created with a prefix using the same command used to activate environments created by name:
 
-conda activate ./envs
+conda activate ./myenvs
+or:
+conda activate /home/mehdi/Desktop/Trimble/Projects/Ear2ground/Python_codes/VS_Code/myenvs
 
     Conda can no longer find your environment with the --name flag. You’ll generally need to pass the --prefix flag along with the environment’s full path to find the environment.
 
