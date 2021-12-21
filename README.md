@@ -6,6 +6,7 @@
 *[link-4](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)<br>
 *[link-5](https://conda.pydata.org/docs/using/envs.html)<br>
 *[link-6-recomended](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)<br>
+*[Jose_Portio](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
 ## create a virtual environment, (conda create --help)
 Use the terminal or an Anaconda Prompt for the following steps:<br>
 1-  To create an environment:<br>
